@@ -21,9 +21,9 @@ class MidiHandler(object):
             if midi_path == "end":
                 break
             try:
-                MidiFile(midi_path, clip=True)
+                MidiFile(midi_path)
                 cleaned_midi_paths.append(midi_path)
-            except EOFError:
+            except (EOFError, OSError):
                 broken_archive_folder = optional_archive_path if optional_archive_path else Path(__file__).parent / "midi_src" / "broken_midi"
                 if not broken_archive_folder.exists():
                     broken_archive_folder.mkdir(parents=True, exist_ok=True)
