@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
@@ -13,18 +11,15 @@ long_description = (here / "README.md").read_text(encoding="utf-8")
 
 cmdclass = {"build_sphinx": BuildDoc}
 
-name = "inv_ai_music_composer", # Required
-version = "0.0.1", # Required
-
 setup(
-    name=name,
-    version=version,
+    name="inv_ai_music_composer",
+    version="0.0.1",
     description="Passion Project, AI Music Composer", # Optional
     long_description=long_description, # Optional
     long_description_content_type="text/markdown",  # Optional
     url="",  # Optional
     author="Adji Arioputro",  # Optional
-    author_email="adji.arioputro@invensity.com",  # Optional
+    author_email="",  # Optional
     classifiers=[  # Optional
         "Development Status :: 2 - PreAlpha",
         "License :: OSI Approved :: MIT License",
@@ -99,9 +94,8 @@ setup(
     },
     command_options={
         "build_sphinx": {
-            "project": ("setup.py", name),
-            "version": ("setup.py", version),
+            "project": ("setup.py", "inv_ai_music_composer"),
+            "version": ("setup.py", "0.0.1"),
         }
     },
 )
->>>>>>> b6514ee (BLD: Add Sphinx for build docs in setup.py)
